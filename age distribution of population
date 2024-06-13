@@ -1,0 +1,18 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+file_path = r'D:\7th sem btech\svm_data.csv'  # Prefix with 'r' to make it a raw string
+data = pd.read_csv(file_path)
+
+# Assuming the dataset has a column named 'age'
+ages = data['x1']  # Replace 'age' with the relevant column name in your dataset
+
+# Create the histogram
+plt.figure(figsize=(10, 6))
+plt.hist(ages, bins=20, edgecolor='black', alpha=0.7)
+plt.title('Age Distribution of Population')
+plt.xlabel('x1')
+plt.ylabel('x2')
+plt.grid(True)
+plt.show()
